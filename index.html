@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catchphraise-Béstĭa</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&display=swap" rel="stylesheet">
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-family: 'UnifrakturMaguntia', cursive;
+            margin: 0;
+            background-color: #FFFFFF;
+            text-align: center;
+            overflow-x: hidden;
+        }
+        h1, h2, h3, h5 {
+            margin: 0.5em 0;
+        }
+        h1 {
+            font-size: 3em;
+            color: #000000;
+            font-weight: bold;
+        }
+        h2 {
+            font-size: 2em;
+        }
+        h3 {
+            font-size: 1.5em;
+            font-weight: bold;
+            background: linear-gradient(to right, #E9C12A, #824AC2);
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+        h3 a {
+            background: linear-gradient(to right, #E9C12A, #824AC2);
+            -webkit-background-clip: text;
+            color: transparent;
+            text-decoration: none;
+        }
+        h5 {
+            font-size: 1em;
+            font-style: italic;
+            color: #BFBFBF;
+            font-family: Arial, sans-serif;
+        }
+        .animated {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 1s ease-out, transform 1s ease-out;
+        }
+        .animated.visible {
+            opacity: 1;
+            transform: none;
+        }
+        .image {
+            max-width: 100%;
+            height: auto;
+        }
+        @media (max-width: 600px) {
+            h1 { font-size: 2.5em; }
+            h2 { font-size: 1.5em; }
+            h3 { font-size: 1.2em; }
+            h5 { font-size: 0.8em; }
+        }
+    </style>
+</head>
+<body>
+    <h1 class="animated">光輝.</h1>
+    <img src="file:///C:/Users/user/Desktop/SHADOW.png" alt="SHADOW" class="animated image">
+    <h2 class="animated" style="color: #824AC2;">Who embraces the darkest night,</h2>
+    <h5 class="animated" style="font-family: Arial, sans-serif;">가장 짙은 어둠을 자처하며,</h5>
+    <h2 class="animated" style="color: #E9C12A;">Yearns for the brightest light.</h2>
+    <h5 class="animated" style="font-family: Arial, sans-serif;">가장 밝은 빛을 선망하는 자.</h5>
+    <h2 class="animated" style="color: #E9C12A; font-weight: bold;">Béstĭa,</h2>
+    <h5 class="animated" style="font-family: Arial, sans-serif;">맹수,</h5>
+    <h2 class="animated" style="color: #824AC2; font-weight: bold;">Béstĭa.</h2>
+    <h5 class="animated" style="font-family: Arial, sans-serif;">베스티아.</h5>
+    <h3 class="animated"><a href="https://example.com">-.-. --- -.. .   -. .- -- . ---...   ... .... .- -.. --- .--</a></h3>
+    <script>
+        document.addEventListener('scroll', function() {
+            var elements = document.querySelectorAll('.animated');
+            var scrollTop = document.documentElement.scrollTop;
+            var windowHeight = window.innerHeight;
+
+            elements.forEach(function(element) {
+                var elementTop = element.getBoundingClientRect().top + scrollTop;
+                if (scrollTop + windowHeight > elementTop) {
+                    element.classList.add('visible');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
